@@ -1,5 +1,6 @@
 // 1.0.8.1 modified Jan, 2020 by Wayne Wright, W5XD
-// 
+// write4bits and pulseEnable are protected instead of private such that they can be subclassed.
+// No other changes.
 #ifndef LiquidCrystal_h
 #define LiquidCrystal_h
 
