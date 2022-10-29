@@ -39,6 +39,13 @@ public:
         return (ret >= 890000) && (ret <= 1020000);
     }
 
+    bool FrequencyRaw(uint32_t& ret)
+    {
+        const uint32_t DETECT_OLD_SETTING = 1000000;
+        EEPROM.get(m_EEpromOffset + FREQUENCYKHZ_POSITION, ret);
+        return (ret > DETECT_OLD_SETTING) && ret != -1L;
+    }
+
     // read the encryption key from the EEPROM
     const char *EncryptionKey()
     {
