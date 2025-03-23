@@ -43,7 +43,7 @@ public:
     {
         const uint32_t DETECT_OLD_SETTING = 1000000;
         EEPROM.get(m_EEpromOffset + FREQUENCYKHZ_POSITION, ret);
-        return (ret > DETECT_OLD_SETTING) && ret != -1L;
+        return (ret > DETECT_OLD_SETTING) && ret != static_cast<uint32_t>(-1L);
     }
 
     // read the encryption key from the EEPROM
